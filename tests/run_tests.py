@@ -8,6 +8,7 @@ bad sample and leaves the clean ones alone, the scripts survive a cp1252
 console, the robot refuses unfinished posts, and no personal detail leaked
 into the bundle.
 """
+import datetime as dt
 import glob
 import importlib.util
 import json
@@ -309,6 +310,57 @@ class Publisher(unittest.TestCase):
             self.assertEqual(r.returncode, 0, r.stderr)
             self.assertIn(b"waiting", r.stdout, "a post with a missing image waits")
             self.assertEqual(len(glob.glob(os.path.join(home, "queue", "*.json"))), 1, "nothing was moved")
+
+    def test_second_run_skips_an_item_already_being_sent(self):
+        with tempfile.TemporaryDirectory() as home:
+            self.use_home(home)
+            path = self.queue_item("post-a.json", dt.datetime.now().astimezone())
+            claimed = self.P.claim_for_send(path)
+            self.assertEqual(claimed["status"], "sending")
+            self.assertIsNone(self.P.claim_for_send(path), "a second run must leave a claimed item alone")
+            self.assertTrue(os.path.exists(path))
+
+    def test_interrupted_send_is_parked_not_reposted(self):
+        with tempfile.TemporaryDirectory() as home:
+            self.use_home(home)
+            started = dt.datetime.now().astimezone() - dt.timedelta(hours=2)
+            path = self.queue_item("post-b.json", started)
+            item = self.P.read_json(path)
+            item.update(status="sending", sending_at=started.isoformat())
+            self.P.write_json(path, item)
+            self.assertIsNone(self.P.claim_for_send(path))
+            self.assertFalse(os.path.exists(path), "the item leaves the queue")
+            parked = os.path.join(self.P.QUEUE, "failed", "post-b.json")
+            with open(parked, encoding="utf-8") as fh:
+                item = json.load(fh)
+            self.assertEqual(item["status"], "failed")
+            self.assertIn("interrupted", item["error"])
+
+    def test_run_lock_is_exclusive(self):
+        with tempfile.TemporaryDirectory() as home:
+            self.use_home(home)
+            first = self.P.acquire_run_lock()
+            self.assertIsNotNone(first)
+            self.assertIsNone(self.P.acquire_run_lock(), "only one run at a time")
+            self.P.release_run_lock(first)
+            second = self.P.acquire_run_lock()
+            self.assertIsNotNone(second)
+            self.P.release_run_lock(second)
+
+    def use_home(self, home):
+        P = self.P
+        P.HOME = home
+        P.SECRETS = os.path.join(home, "secrets")
+        P.QUEUE = os.path.join(home, "queue")
+        P.IMAGES = os.path.join(home, "images")
+        P.LOG = os.path.join(home, "publish.log")
+        os.makedirs(P.QUEUE, exist_ok=True)
+        os.makedirs(P.IMAGES, exist_ok=True)
+
+    def queue_item(self, name, at):
+        path = os.path.join(self.P.QUEUE, name)
+        self.P.write_json(path, {"kind": "post", "at": at.isoformat(), "text": "Shipping.", "status": "pending"})
+        return path
 
 
 if __name__ == "__main__":

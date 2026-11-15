@@ -50,6 +50,8 @@ REDIRECT = "http://localhost:8765/callback"
 SCOPES = "openid profile w_member_social"
 TASK = "li-stack-publish"
 RESHARES_PER_DAY = 1
+SENDING = "sending"
+STALE_SENDING = dt.timedelta(hours=1)  # a claim older than this was interrupted mid-send
 LITTLE_TEXT = re.compile(r"([\\|{}@\[\]()<>#*_~])")  # reserved in the Posts API "little text" format
 
 
@@ -349,7 +351,80 @@ def move(path, item, folder):
     os.remove(path)
 
 
+def acquire_run_lock():
+    """Take the run lock; None when another run is still working the queue."""
+    os.makedirs(HOME, exist_ok=True)
+    fh = open(os.path.join(HOME, "run.lock"), "a+b")
+    try:
+        fh.write(b"x")
+        fh.flush()
+        fh.seek(0)
+        if os.name == "nt":
+            import msvcrt
+            msvcrt.locking(fh.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        fh.close()
+        return None
+    return fh
+
+
+def release_run_lock(fh):
+    if fh is None:
+        return
+    try:
+        if os.name == "nt":
+            import msvcrt
+            fh.seek(0)
+            msvcrt.locking(fh.fileno(), msvcrt.LK_UNLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(fh.fileno(), fcntl.LOCK_UN)
+    finally:
+        fh.close()
+
+
+def claim_for_send(path):
+    """Mark a due item as being sent, before send() runs.
+
+    Returns the updated item, or None when another run owns it, or when the
+    item was interrupted mid-send earlier (it is parked in failed/, never
+    posted twice).
+    """
+    it = read_json(path)
+    if it is None:
+        return None
+    if it.get("status") == SENDING:
+        try:
+            fresh = now() - dt.datetime.fromisoformat(it["sending_at"]) < STALE_SENDING
+        except (KeyError, TypeError, ValueError):
+            fresh = False
+        if fresh:
+            return None
+        it.update(status="failed", failed_at=now().isoformat(),
+                  error="interrupted while sending; check the feed before retrying")
+        move(path, it, "failed")
+        log(f"FAILED {os.path.basename(path)}: interrupted while sending (moved to failed, not re-sent)")
+        return None
+    it.update(status=SENDING, sending_at=now().isoformat())
+    write_json(path, it)
+    return it
+
+
 def cmd_run(args):
+    lock = None if args.dry_run else acquire_run_lock()
+    if not args.dry_run and lock is None:
+        log("another run is still sending; skipping this one")
+        return
+    try:
+        run_due(args)
+    finally:
+        release_run_lock(lock)
+
+
+def run_due(args):
     due = [(p, it) for p, it in pending() if dt.datetime.fromisoformat(it["at"]) <= now()]
     if not due:
         return
@@ -364,6 +439,9 @@ def cmd_run(args):
             continue
         if args.dry_run:
             log(f"dry-run: would send {label}")
+            continue
+        it = claim_for_send(path)
+        if it is None:
             continue
         try:
             urn = send(it, tok, person)
