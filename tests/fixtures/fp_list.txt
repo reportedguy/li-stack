@@ -1,0 +1,11 @@
+I tested 3 note apps for 2 weeks in October and kept one of them.
+
+1. Notion: great for docs, slow to open on my phone, about 4.5 seconds.
+2. Obsidian: fast, local, and the plugin I needed took me 20 minutes to set up.
+3. Apple Notes: instant, but I couldn't link notes the way I wanted.
+
+I kept Obsidian because the files are plain markdown on my own disk, which means I can grep them. The work I do in it is mostly drafts and build logs — nothing fancy.
+
+My setup notes are at https://example.com/leverage-robust-notes if you want to copy them.
+
+Which app would you have kept, and why?

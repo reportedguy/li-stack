@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "li-stack",
+  "description": "LinkedIn skills for a builder with a founder persona",
+  "owner": {
+    "name": "li-stack contributors"
+  },
+  "plugins": [
+    {
+      "name": "li-stack",
+      "description": "16 LinkedIn skills: plan, posts, comments, replies, reshares, monitor, engagers, profile, carousels, repurposing, DMs, inbox, audits, interviewer, hook extractor, humanizer, posting robot.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

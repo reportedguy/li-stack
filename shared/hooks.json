@@ -1,0 +1,682 @@
+{
+  "version": "1.0",
+  "note": "40 hook formulas. Merged from Serge Bulaev's 20 (F1-F20, with 2026 reach notes) and Jake Schincariol's 21 (with traps), deduplicated, plus 7 formats from the creators in voice.md. Examples show the shape only: some numbers are the original authors' and some are illustrative. Never reuse an example's number in a draft. Goal = what the post mainly earns. Caution 'care' = read note_2026 before using.",
+  "rules": [
+    "Pick by goal first, then by topic.",
+    "Never blend two hooks in one post.",
+    "Line 1 is never a question. If the best hook is a question, invert it into the number that answers it and move the question to the close.",
+    "Don't use the same hook twice in 7 days.",
+    "The density rule in rules.md applies on top of every template."
+  ],
+  "goals": {
+    "comments": [
+      "H01",
+      "H04",
+      "H05",
+      "H06",
+      "H11",
+      "H13",
+      "H18",
+      "H19",
+      "H23",
+      "H25",
+      "H26",
+      "H27",
+      "H28",
+      "H30",
+      "H33",
+      "H35",
+      "H36",
+      "H38"
+    ],
+    "reposts": [
+      "H02",
+      "H10",
+      "H15",
+      "H19",
+      "H21",
+      "H22",
+      "H31",
+      "H37"
+    ],
+    "likes": [
+      "H03",
+      "H12",
+      "H14",
+      "H17",
+      "H29",
+      "H34",
+      "H36",
+      "H39"
+    ],
+    "saves": [
+      "H07",
+      "H08",
+      "H09",
+      "H16",
+      "H20",
+      "H24",
+      "H32",
+      "H40"
+    ]
+  },
+  "hooks": [
+    {
+      "id": "H01",
+      "slug": "contrarian-receipts",
+      "name": "Contrarian + Receipts",
+      "from": [
+        "Serge F10",
+        "Jake #1"
+      ],
+      "goal": "comments",
+      "caution": "ok",
+      "template": "Everyone says {common advice}. After {specific experience with a number}, I think that's wrong.\n\n[2-6 dated receipts or data points]\n\n[What actually works instead, stated plainly]\n\n[Specific closing question]",
+      "example": "Everyone says post daily. I posted 4x a week for a year and beat every daily poster in my niche.",
+      "best_for": "Taking a position. Highest comment rate.",
+      "trap": "Being contrarian about something nobody believes. The belief has to be genuinely common.",
+      "note_2026": "Dated receipts are the best protection a post can have. Use one contrast only: either 'what died wasn't X, it was Y' or an 'if you're still X' close, never both."
+    },
+    {
+      "id": "H02",
+      "slug": "rip-obituary",
+      "name": "R.I.P. Obituary",
+      "from": [
+        "Serge F2"
+      ],
+      "goal": "reposts",
+      "caution": "ok",
+      "template": "R.I.P. {category or habit}.\n\nCause of death: {specific mechanism + number}.\n\n[2-3 paragraphs of dated evidence]\n\nI {defended / did} {old thing} until {dated event}.\n\nUnder the hood, {N} things changed:\n1. [change + number]\n...\n\n[One-line close]",
+      "example": "R.I.P. the 40-slide pitch deck for pre-seed.",
+      "best_for": "Era-ending claims, 'the game changed' posts.",
+      "trap": "Declaring something dead that's still working for most of your readers. They'll say so.",
+      "note_2026": "'The winners aren't X, they're Y' close is a contrast; fine once, so don't open with one too."
+    },
+    {
+      "id": "H03",
+      "slug": "before-after",
+      "name": "Before / After",
+      "from": [
+        "Serge F3",
+        "Jake #4"
+      ],
+      "goal": "likes",
+      "caution": "ok",
+      "template": "{Time ago / last year}, I {low state with a number}.\n\n{Now / this year}, I {high state with a number}.\n\n[Line 3: the first concrete number of the change]\n\nThe difference was {one lever}.\n\n[How the lever works, 3-5 lines]\n\n[Mirror question: what's your {before}→{after}?]",
+      "example": "18 months ago I was writing proposals at 2am. Today I send them in 6 minutes. One template did it.",
+      "best_for": "Proof you've travelled the distance your reader wants to travel.",
+      "trap": "Three-part transformations. Name one lever or the reader stops believing you.",
+      "note_2026": "Number-first by construction. Never open line 3 with 'Here's what changed'."
+    },
+    {
+      "id": "H04",
+      "slug": "time-anchor-confession",
+      "name": "Time-Anchor Confession",
+      "from": [
+        "Serge F4"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "{N} {days/months} ago, I stopped {behaviour}.\n\n[Line 2: the first consequence, with a number]\n\n[Why the old behaviour seemed to work]\n\n[The quiet cost]\n\n[New behaviour, what dropped, what surprised you]\n\n[Mirror question: what did you stop that made your work better?]",
+      "example": "On 14 March I stopped answering DMs within the hour. Replies fell 41%. Clients got better.",
+      "best_for": "A real reset, a habit you dropped.",
+      "trap": "Manufactured vulnerability. Readers can tell, and now they report it.",
+      "note_2026": "The confession must be a specific, dated, uncomfortable fact with no 'let me be honest' frame, and the substance must land in the first 3 lines."
+    },
+    {
+      "id": "H05",
+      "slug": "mistake-cost",
+      "name": "Mistake Cost",
+      "from": [
+        "Jake #3",
+        "Paritosh"
+      ],
+      "goal": "comments",
+      "caution": "ok",
+      "template": "{Specific cost: money, hours, marks, a round} is what {one mistake} cost me.\n\n[What happened, dated]\n\n[What I do now, as exact steps]\n\n[The resource or check that would have saved me]\n\n[Question: what's the check you added after your worst mistake?]",
+      "example": "$18,000 is what not having a contract cost me last March.",
+      "best_for": "Trust. People forward the posts where you look bad. Core of the 'nobody told me' format.",
+      "trap": "A fake-humble mistake. 'I cared too much' reads as a brag and kills the post.",
+      "note_2026": "Real failure in the first 3 lines outperforms polished framing. State the cost flat, no candor announcement."
+    },
+    {
+      "id": "H06",
+      "slug": "self-proving-meta",
+      "name": "Self-Proving Test",
+      "from": [
+        "Serge F5"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "{Claim with a number}.\n\nNot because {common reason}. Because {real reason}.\n\nSo here's the test. For the next {timeframe}, I will {specific commitment}.\n\nYou do two things:\n1. [substantive action]\n2. [verification action]\n\nIf I'm right, {outcome}. If I'm wrong, I'll post the numbers anyway.",
+      "example": "Most posts die in the first 30 minutes. For the next 24 hours I'll reply to every comment within 5.",
+      "best_for": "Tests in public, building-in-public experiments.",
+      "trap": "Making a promise you won't keep. Someone will check.",
+      "note_2026": "The two reader actions must be real (verify a number, report a result), never 'comment YES'. 'Not because X. Because Y.' is this post's one contrast."
+    },
+    {
+      "id": "H07",
+      "slug": "steal-this",
+      "name": "Steal This",
+      "from": [
+        "Jake #21",
+        "Serge F6 (safe variant)",
+        "Matt Barker",
+        "Ruben Hassid"
+      ],
+      "goal": "saves",
+      "caution": "ok",
+      "template": "Here's the (exact) {template / prompt / checklist / repo} I used to {specific outcome with a number}. Copy it.\n\n[The whole thing, in the post or a carousel]\n\n[How to use it in 2-3 lines]\n\n[Question about the reader's situation]\n\nP.S. {Editable copy / link} is in the first comment. Free.",
+      "example": "Here's the exact 4-line email I used to reopen 3 dead deals. Steal it.",
+      "best_for": "Lead magnets without the gate. Highest conversion format.",
+      "trap": "Making them ask for something you could have posted. Give the artifact away in the post.",
+      "note_2026": "Never 'comment X to get Y': that's the phrasing the March 2026 update targets and readers report. Put the file in the first comment and say so."
+    },
+    {
+      "id": "H08",
+      "slug": "receipt-ledger",
+      "name": "Receipt / Ledger",
+      "from": [
+        "Serge F7",
+        "Jake #10"
+      ],
+      "goal": "saves",
+      "caution": "ok",
+      "template": "{Odd, unrounded number}.\n\n[One line: what this number covers]\n\nEvery line item, nothing rounded:\n- {item}: {number}\n- {item}: {number}\n...\n\n[What it replaces or compares to]\n\n[What surprised you: what broke, what worked]",
+      "example": "{{₹ cost}} and {{N}} hours. That's what shipping my first open-source app cost.",
+      "best_for": "Build logs, cost breakdowns, 'what it actually took'. The strongest 2026 opener.",
+      "trap": "A receipt with no story. The number opens the door, the story is the room. And never round or invent a figure.",
+      "note_2026": "Odd-precision number in line 1 is the biggest positive first-line signal (+34% median likes, vendor data)."
+    },
+    {
+      "id": "H09",
+      "slug": "paid-vs-free",
+      "name": "Paid vs Free",
+      "from": [
+        "Serge F8"
+      ],
+      "goal": "saves",
+      "caution": "ok",
+      "template": "{People pay / I paid} {amount} for {thing}.\n\nToday it's free.\n\nThe exact {N}-step {named framework}:\n1. {STEP}: [concrete instruction]\n...\n\n[Run it today. Most people find {N} fixes in {time}.]",
+      "example": "Bootcamps charge {{price}} for this Claude Code setup. Here it is free.",
+      "best_for": "Giving away a framework that's genuinely worth money.",
+      "trap": "Steps that are vague imperatives ('be customer-obsessed'). Each step must be something you can do with your hands.",
+      "note_2026": "Highest baseline multiplier in Serge's set (19.64x). Steps must not be 'Stop X, start Y' lines."
+    },
+    {
+      "id": "H10",
+      "slug": "comparison",
+      "name": "The Comparison",
+      "from": [
+        "Jake #12"
+      ],
+      "goal": "reposts",
+      "caution": "ok",
+      "template": "{Expensive or popular option} vs {cheap or unpopular option}. {Surprising verdict}.\n\n[Same task, both ways, with numbers]\n\n[What the expensive option genuinely does better]\n\n[When you'd pick each]",
+      "example": "A $12,000 brand agency vs a $20 tool and a weekend. The weekend won.",
+      "best_for": "Tool and process posts. Very high share rate.",
+      "trap": "An unfair comparison. Concede what the expensive option genuinely does better.",
+      "note_2026": "The comparison is the post's one contrast."
+    },
+    {
+      "id": "H11",
+      "slug": "curiosity-gap",
+      "name": "Curiosity Gap",
+      "from": [
+        "Serge F9",
+        "Jake #19"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "The {superlative} {thing} I ever {did} {broke the obvious rule}.\n\n[Line 3, before the fold: the specific reveal with a number or name]\n\n[One sensory anchor]\n\n[What it means]\n\n[Closing question]",
+      "example": "The best hire I ever made failed the interview.",
+      "best_for": "Openers that earn the 'see more' tap.",
+      "trap": "A gap you never close. Pay it off by line 3 or you've written clickbait.",
+      "note_2026": "Teaser phrases ('what nobody tells you', 'the real question is') are on every AI-tell list. The gap must be specific and close inside the first 140-210 characters."
+    },
+    {
+      "id": "H12",
+      "slug": "cold-open",
+      "name": "Story Cold Open",
+      "from": [
+        "Serge F11",
+        "Jake #9"
+      ],
+      "goal": "likes",
+      "caution": "ok",
+      "template": "\"{The real line of dialogue}\"\n\n{Who said it, when, and why it mattered, with a date or number}.\n\n[3-6 short present-tense lines inside the scene]\n\n[The turn: what changed, what it cost]\n\n[One line of meaning, not a moral]",
+      "example": "\"We're going with someone cheaper.\"\n\nThat email arrived 40 minutes after I sent my best proposal of the year.",
+      "best_for": "Story posts. Highest dwell time.",
+      "trap": "Dialogue nobody would say, or stakes you made up. Use the real line, including the ugly parts.",
+      "note_2026": "Specifics (a date, a place, a number, a name) in the first two lines are what separate real vulnerability from the 'false vulnerability' trope. Never all-caps the first line."
+    },
+    {
+      "id": "H13",
+      "slug": "permission-slip",
+      "name": "Permission Slip",
+      "from": [
+        "Serge F12",
+        "Jake #13"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "You're allowed to {specific thing your reader feels guilty about}.\n\n[One dated fact from your own record that earns the permission]\n\n[What happened when you allowed it]\n\n[Soft close]",
+      "example": "You're allowed to skip a hackathon to finish one project properly.",
+      "best_for": "Reach beyond your niche.",
+      "trap": "Generic self-care. It must be specific to your reader's working life, and you must believe it.",
+      "note_2026": "Visibly formulaic. Max once a month, one permission (not three), and it needs a dated fact from your own record."
+    },
+    {
+      "id": "H14",
+      "slug": "bait-and-switch",
+      "name": "Bait and Switch",
+      "from": [
+        "Serge F13"
+      ],
+      "goal": "likes",
+      "caution": "ok",
+      "template": "No more {beloved habit / standard practice}.\n\nI'm also cutting {second thing}.\n\n[Beat of suspense]\n\n[The reveal: it's an upgrade, with a number]\n\n[The value underneath the change]",
+      "example": "No more to-do lists. I'm also cutting my Notion dashboard.",
+      "best_for": "A process change that's secretly an improvement.",
+      "trap": "A real loss dressed up as good news. The comments will catch it.",
+      "note_2026": "Write the reveal as a plain sentence with a number. No 'Plot twist:' bridge."
+    },
+    {
+      "id": "H15",
+      "slug": "named-gratitude",
+      "name": "Named Gratitude",
+      "from": [
+        "Serge F14"
+      ],
+      "goal": "reposts",
+      "caution": "ok",
+      "template": "To {Name} and {Name}: thank you for {the specific thing}.\n\n[What each person actually did, one concrete act each]\n\n[Why it mattered to the work]\n\n[Close that honours them, not you]",
+      "example": "To {{Name}} and {{Name}}, who reviewed my first {{N}} pull requests line by line: thank you.",
+      "best_for": "Mentors, teammates, the people behind a win. Celebrating others travels.",
+      "trap": "Name-dropping to borrow reach. Readers see through it.",
+      "note_2026": "Give each person one concrete act, not a one-word quality ('the vision, the grit, the heart' is the triple tell)."
+    },
+    {
+      "id": "H16",
+      "slug": "explain-like-5",
+      "name": "Explain Like I'm 5",
+      "from": [
+        "Serge F15"
+      ],
+      "goal": "saves",
+      "caution": "ok",
+      "template": "{Jargon term} explained simply.\n\n{TERM}: what it actually means\n- {part} = {plain meaning}\n- {part} = {plain meaning}\n...\n\n[One-line close]",
+      "example": "PRD vs BRD vs MRD, explained like you're in first year.",
+      "best_for": "Demystifying jargon. Saved and reshared as a reference.",
+      "trap": "Getting it wrong or sounding condescending. Both destroy authority.",
+      "note_2026": "Line 1 is a statement, not 'What is X?'."
+    },
+    {
+      "id": "H17",
+      "slug": "status-strip",
+      "name": "Status Strip",
+      "from": [
+        "Serge F16"
+      ],
+      "goal": "likes",
+      "caution": "ok",
+      "template": "On paper, I'm {impressive label}.\n\nIn reality, {the humbling moment, specific}.\n\n[The scene]\n\n[What the contrast taught you, in 1-2 lines]",
+      "example": "On paper I shipped an e-commerce store for a wholesale business. In reality, day one was {{the real humbling moment}}.",
+      "best_for": "Self-roast posts. Turns credibility into warmth.",
+      "trap": "A humble-brag. The setup must genuinely deflate.",
+      "note_2026": "'On paper / in reality' is the post's one contrast. Put one real detail in the humbling scene."
+    },
+    {
+      "id": "H18",
+      "slug": "controlled-ab",
+      "name": "Controlled A/B",
+      "from": [
+        "Serge F17"
+      ],
+      "goal": "comments",
+      "caution": "ok",
+      "template": "{Action A} → {outcome A with a number}.\n{Same action, one thing changed} → {opposite outcome B with a number}.\n\nSame {constant}. Same {constant}. The only difference was {variable}.\n\n[What you first thought it meant]\n[What it actually shows]\n\n[Question that makes the reader test their own variable]",
+      "example": "Launched {{app}} with a landing page → {{N}} signups. Relaunched it with a 30-second demo video → {{N}}.",
+      "best_for": "One variable flipped the outcome. Reads as evidence, not opinion.",
+      "trap": "Changing two things. Then it's a story, not a comparison.",
+      "note_2026": "The A/B is the contrast. Don't add an 'it's not the tool, it's the brief' line on top."
+    },
+    {
+      "id": "H19",
+      "slug": "false-binary",
+      "name": "False Binary",
+      "from": [
+        "Serge F18"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "Everyone reaches for one of two answers to {problem}.\n\n{Option A}? {Why it fails.}\n{Option B}? {Why it fails.}\n\nBoth fail for the same reason: {shared flaw}.\n\nSo I tried a third: {concrete option}.\n\n[How it works, 2-3 lines with numbers]\n\n[Question: A, B, or something else?]",
+      "example": "Every fresher picks either 'learn everything' or 'specialise early'. Both fail for the same reason.",
+      "best_for": "Strategy posts where both obvious answers are wrong.",
+      "trap": "A strawman. A and B must be what readers really reach for.",
+      "note_2026": "Structurally a contrast plus a triple. Only use it when the third option is concrete, and never pair it with H21 in the same post."
+    },
+    {
+      "id": "H20",
+      "slug": "anecdote-evidence",
+      "name": "Anecdote Meets Evidence",
+      "from": [
+        "Serge F19"
+      ],
+      "goal": "saves",
+      "caution": "ok",
+      "template": "[Something small you noticed, with a number]\n\nI thought I'd found something. Turns out it's measured already:\n\n→ {evidence + number + source}\n→ {evidence + number + source}\n→ {evidence + number + source}\n\n[What the pattern really is]\n[What you did about it]\n[Operational question]",
+      "example": "My last {{N}} posts with a number in line 1 got {{N}}x the comments. Turns out that's measured already:",
+      "best_for": "Personal noticing backed by real data.",
+      "trap": "Invented or unsourced stats. Use H05 instead if you don't have evidence.",
+      "note_2026": "Three sourced numbers are the safe kind of triple. No 'Here's what the data says' bridge."
+    },
+    {
+      "id": "H21",
+      "slug": "diverging-curves",
+      "name": "Diverging Curves",
+      "from": [
+        "Serge F20"
+      ],
+      "goal": "reposts",
+      "caution": "ok",
+      "template": "[Two things that look the same today]\n\n{Approach A}: {what it does over time}.\n{Approach B}: {the opposite}.\n\nMonth one, {X}. Month six, {Y}.\n\n{One-line maxim}",
+      "example": "Courses give you certificates. Projects give you stories. Month one, same CV. Month six, only one gets interviews.",
+      "best_for": "A closing move, or a short quotable post.",
+      "trap": "Forcing it on two things that don't actually diverge.",
+      "note_2026": "The maxim is the one contrast. Short standalone posts miss the length lift; fine as a close for H18 or H08."
+    },
+    {
+      "id": "H22",
+      "slug": "anaphora",
+      "name": "Anaphora Stack",
+      "from": [
+        "Serge F1"
+      ],
+      "goal": "reposts",
+      "caution": "ok",
+      "template": "{Thing 1} can {bad outcome} {timing}.\n{Thing 2} can {bad outcome} for {reason}.\n[3-4 more parallel lines, escalating]\n\n[One real anecdote with a number]\n\n[The real asset, stated plainly]\n\nSo I changed how I work:\n- [tactic]\n- [tactic]\n\n[Personal-audit question]",
+      "example": "Placements can get delayed. Offers can get revoked. Startups can shut down in a month.",
+      "best_for": "Risk and dependency arguments.",
+      "trap": "Framing LinkedIn itself as bad, inside a LinkedIn post.",
+      "note_2026": "The repetition run is the post's one stacked device. State the reframe directly, no 'Here's what most people miss'."
+    },
+    {
+      "id": "H23",
+      "slug": "number-reveal",
+      "name": "Experiment Result",
+      "from": [
+        "Jake #2"
+      ],
+      "goal": "comments",
+      "caution": "ok",
+      "template": "I {did thing} for {N} {days/weeks}. {Result in numbers}.\n\n[Setup: why and how]\n\n[What happened, with numbers]\n\n[What I'd change]",
+      "example": "I sent 400 cold DMs in 30 days. 11 replied. 2 became clients.",
+      "best_for": "Challenges, experiments, anything countable.",
+      "trap": "Burying the number. It goes in line 1 or the formula does nothing.",
+      "note_2026": "Number-first by construction."
+    },
+    {
+      "id": "H24",
+      "slug": "list-promise",
+      "name": "List Promise",
+      "from": [
+        "Jake #5",
+        "Jasmin Alić"
+      ],
+      "goal": "saves",
+      "caution": "ok",
+      "template": "{N} things I wish someone had told me before {milestone}.\n\n1. [specific, actionable]\n...\n\n[Which one cost you the most to learn]",
+      "example": "7 things I wish someone had told me before I shipped my first open-source app.",
+      "best_for": "Saves.",
+      "trap": "N above 10. The reader doesn't believe you have 15 good ones, and you don't.",
+      "note_2026": "Each item needs a specific. Ten vague items is the slop pattern."
+    },
+    {
+      "id": "H25",
+      "slug": "insider-secret",
+      "name": "Insider View",
+      "from": [
+        "Jake #6"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "After {N months/rounds/projects} {doing thing}, here's the part nobody puts in the {course / JD / brochure}.\n\n[The specific thing]\n\n[Proof from your own experience]",
+      "example": "After 3 case competitions, here's the part the problem statement never tells you.",
+      "best_for": "Credentialed takes. Works only if the experience is real.",
+      "trap": "Promising a secret and delivering common knowledge. The comments will say so.",
+      "note_2026": "'Nobody tells you' phrasing is on AI-tell lists. Name the specific thing in line 2 to survive it."
+    },
+    {
+      "id": "H26",
+      "slug": "callout",
+      "name": "The Callout",
+      "from": [
+        "Jake #7"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "If you're still {doing outdated thing}, {specific cost}.\n\n[Why it stopped working, with a date or number]\n\n[What to do instead, exact steps]",
+      "example": "If you're still writing every line by hand before you prototype, you're paying for it in weeks.",
+      "best_for": "Short posts with one instruction.",
+      "trap": "Calling out something nobody does, or calling out your own audience with contempt.",
+      "note_2026": "Avoid the 'Stop X, start Y' wording (-6.7%). Name the cost instead."
+    },
+    {
+      "id": "H27",
+      "slug": "scenario",
+      "name": "Scenario",
+      "from": [
+        "Jake #8",
+        "Saumya Awasthi"
+      ],
+      "goal": "comments",
+      "caution": "ok",
+      "template": "You're in a {customer call / investor meeting / code review}. {The exact question or situation}.\n\n[What most people do]\n\n[What actually works, in numbered steps]\n\n[Specific closing question]",
+      "example": "You're on a call with your first paying customer. They ask: \"Why should I trust a 4-person team?\"",
+      "best_for": "Founder and builder thinking in public. Very high comment volume.",
+      "trap": "A scenario with one obvious answer. There has to be a real fork.",
+      "note_2026": "Open with the scenario as a statement. The question to the reader goes at the close, not in line 1."
+    },
+    {
+      "id": "H28",
+      "slug": "myth-bust",
+      "name": "Myth Bust",
+      "from": [
+        "Jake #11"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "{Popular explanation} isn't why {bad outcome}.\n\n[The real cause, with a number]\n\n[How to check it in your own case]\n\n[The fix]",
+      "example": "Your idea isn't why nobody's using your app.",
+      "best_for": "Reframing a common belief.",
+      "trap": "Busting the myth and never naming the replacement. Name it in line 2.",
+      "note_2026": "This is an 'it's not X' frame, so it's the post's only contrast."
+    },
+    {
+      "id": "H29",
+      "slug": "tiny-hook",
+      "name": "Tiny Hook",
+      "from": [
+        "Jake #14",
+        "Jay Schwedelson"
+      ],
+      "goal": "likes",
+      "caution": "care",
+      "template": "{One to three words.}\n\n[The relatable moment]\n\n[The one useful line]",
+      "example": "my bad.",
+      "best_for": "Light, relatable posts. Stops the scroll with whitespace.",
+      "trap": "Overuse. Once a month, or it reads as a tic. And it still needs one useful line.",
+      "note_2026": "Counts as one of your 2 fragments for the post."
+    },
+    {
+      "id": "H30",
+      "slug": "warning",
+      "name": "The Warning",
+      "from": [
+        "Jake #15"
+      ],
+      "goal": "comments",
+      "caution": "ok",
+      "template": "{Common practice} is costing you {specific thing your reader cares about}.\n\n[How, with a number]\n\n[The fix, in the same post]",
+      "example": "Your 'quick call to align' is costing you six hours a week.",
+      "best_for": "Readers who haven't connected cause to cost.",
+      "trap": "Fear with no exit. Give the fix in the same post.",
+      "note_2026": "Drop the word 'quietly' (a 2026 tell)."
+    },
+    {
+      "id": "H31",
+      "slug": "good-vs-great",
+      "name": "Good vs Great",
+      "from": [
+        "Jake #16"
+      ],
+      "goal": "reposts",
+      "caution": "ok",
+      "template": "Good {role}s {do X}. Great {role}s {do Y}.\n\n[An example of Y from real work]\n\n[How to practise Y]",
+      "example": "Good builders ship the feature. Great builders delete the one nobody used.",
+      "best_for": "Quotable one-liners.",
+      "trap": "A distinction that's just 'try harder'. Y must be a different action.",
+      "note_2026": "This is the post's one contrast."
+    },
+    {
+      "id": "H32",
+      "slug": "time-saved",
+      "name": "Time Saved",
+      "from": [
+        "Jake #17"
+      ],
+      "goal": "saves",
+      "caution": "ok",
+      "template": "{Task} used to take me {long time}. It now takes {short time}.\n\n[The exact system, as steps]\n\n[What it can't do]",
+      "example": "Writing a week of posts used to take me 5 hours. It now takes 20 minutes.",
+      "best_for": "Tool, system and automation posts. Your Claude Code workflows.",
+      "trap": "An unbelievable ratio. 5 hours to 20 minutes lands. 5 hours to 8 seconds doesn't.",
+      "note_2026": "Number-first by construction."
+    },
+    {
+      "id": "H33",
+      "slug": "unpopular-rule",
+      "name": "Personal Rule",
+      "from": [
+        "Jake #18"
+      ],
+      "goal": "comments",
+      "caution": "ok",
+      "template": "I don't {widely accepted practice}. Ever.\n\n[Why, with a cost you paid]\n\n[What I do instead]",
+      "example": "I don't start a project without a kill date.",
+      "best_for": "Positioning. Attracts the right people by repelling the wrong ones.",
+      "trap": "A rule you break constantly. Someone in the comments will know.",
+      "note_2026": "Fine. Don't preface it with 'Unpopular opinion:'."
+    },
+    {
+      "id": "H34",
+      "slug": "walk-away",
+      "name": "The Walk-Away",
+      "from": [
+        "Jake #20"
+      ],
+      "goal": "likes",
+      "caution": "ok",
+      "template": "I {quit / dropped / killed / deleted} {valuable thing}. {Result}.\n\n[What it cost]\n\n[Why it was right anyway]",
+      "example": "I killed {{project}} {{N}} weeks before launch. {{Other project}} shipped {{N}} days earlier because of it.",
+      "best_for": "Values posts with a result attached.",
+      "trap": "Walking away at no cost. Name what it cost or it reads as theatre.",
+      "note_2026": "Fine."
+    },
+    {
+      "id": "H35",
+      "slug": "chaos-log",
+      "name": "Chaos Log",
+      "from": [
+        "voice.md",
+        "Justin Welsh receipts"
+      ],
+      "goal": "comments",
+      "caution": "ok",
+      "template": "{N} things on my plate this {week/month}. Here's how each one is actually planned.\n\n- {project}: {next step} by {day}\n- ...\n\n[The system that makes it work, 2-4 steps]\n\n[One thing I dropped and why]\n\n[Question]",
+      "example": "{{N}} things on my plate this week and I'm dropping none of them.",
+      "best_for": "Your signature weekly format. Organised chaos, made visible.",
+      "trap": "Turning it into a flex list. The value is the system, not how busy you are.",
+      "note_2026": "Real names of projects and real next steps are what make it specific."
+    },
+    {
+      "id": "H36",
+      "slug": "expectation-reality",
+      "name": "Expectation vs Reality",
+      "from": [
+        "Saheli Chatterjee"
+      ],
+      "goal": "likes",
+      "caution": "ok",
+      "template": "What people think {role / thing} is:\n[the cliché, 1-3 lines]\n\nWhat it actually is:\n- [specific]\n- [specific]\n\n[The one useful line]",
+      "example": "What people think building an app with AI looks like: one prompt, done.\nWhat it actually looked like: {{3 real tasks}}.",
+      "best_for": "Light, relatable posts with a takeaway.",
+      "trap": "Only being funny. End with one line someone can use.",
+      "note_2026": "This is the post's one contrast."
+    },
+    {
+      "id": "H37",
+      "slug": "paradox",
+      "name": "The Paradox",
+      "from": [
+        "Ruben Hassid"
+      ],
+      "goal": "reposts",
+      "caution": "ok",
+      "template": "I {dislike / don't do} {X}. And {my work / my project} is {X}.\n\n[How I square it]\n\n[The exact method]",
+      "example": "I absolutely hate AI writing. And my entire job is to write about AI.",
+      "best_for": "Openers with built-in tension.",
+      "trap": "A fake paradox. Both halves must be true.",
+      "note_2026": "Fine."
+    },
+    {
+      "id": "H38",
+      "slug": "reframe",
+      "name": "Problem Reframe",
+      "from": [
+        "Matt Barker"
+      ],
+      "goal": "comments",
+      "caution": "care",
+      "template": "{Common problem} isn't a {assumed cause} problem. It's a {real cause} problem.\n\n[Evidence, with a number]\n\n[The fix for the real cause, as steps]",
+      "example": "Writing isn't a skill problem. It's a friction problem.",
+      "best_for": "Changing how the reader sees their own problem.",
+      "trap": "Using it as decoration. The real cause must change what the reader does next.",
+      "note_2026": "This is negative parallelism ('isn't X, it's Y'), which costs about 5% when overused. Use it only as the hook, as the post's single contrast."
+    },
+    {
+      "id": "H39",
+      "slug": "period-recap",
+      "name": "Period Recap",
+      "from": [
+        "Justin Welsh",
+        "Saheli Chatterjee"
+      ],
+      "goal": "likes",
+      "caution": "ok",
+      "template": "{Month / quarter / year} as a {student founder / builder}:\n\n- {receipt with a number}\n- {receipt with a number}\n- {receipt with a number}\n\n[One line on what it taught you]\n\n[Specific closing question]",
+      "example": "2024 as a solopreneur: 2x'ed revenue, ~86% margins, launched 2 new products.",
+      "best_for": "Monthly wins, semester recaps.",
+      "trap": "Only wins. Include one failure or it reads as a brag.",
+      "note_2026": "Every line needs a real number from story-bank.md."
+    },
+    {
+      "id": "H40",
+      "slug": "exact-setup",
+      "name": "Exact Setup",
+      "from": [
+        "Ruben Hassid",
+        "Austin Belcak"
+      ],
+      "goal": "saves",
+      "caution": "ok",
+      "template": "{Outcome} in {N} steps. Set it up this (exact) way:\n\n1. Go to {place}. {Click/do exact thing}.\n2. {Exact action}.\n...\n\n[What you get at the end]\n\n[Question]",
+      "example": "Set up Claude Code for a new repo in 4 steps. Step 1: create CLAUDE.md with your folder map, not a vision statement.",
+      "best_for": "The core value format. The reader can do it while reading.",
+      "trap": "Steps that need a computer the reader doesn't have open, or steps that are vague. Each step must be doable on a phone or at a desk in under a minute.",
+      "note_2026": "Starting with the outcome and step count avoids the 'Here's how' opener penalty."
+    }
+  ],
+  "goals_note": "Primary goal for each hook. H19 also earns reposts; H36 also earns comments."
+}

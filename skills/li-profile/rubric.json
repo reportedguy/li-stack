@@ -1,0 +1,73 @@
+{
+  "version": "3.0",
+  "total": 100,
+  "for": "A builder with a founder-style persona, read by founders and other builders. Adapted from Jake Schincariol's 12-part rubric (built for sellers) with Serge Bulaev's headline, About and Featured rules.",
+  "note": "Score honestly. Most first-pass profiles land in the 30s and 40s. A generous score helps nobody.",
+  "items": [
+    {
+      "id": "headline",
+      "points": 12,
+      "full_marks": "Says what you build and for whom (e.g. 'Building local-AI apps with Claude Code'), carries one piece of proof (a shipped product, a real number), and includes 2-3 keywords founders and builders search for (AI, SaaS, the domain). Uses most of the 220 characters. Not just 'Student at X'."
+    },
+    {
+      "id": "about_open",
+      "points": 10,
+      "full_marks": "The first ~265 characters (what shows before 'see more') say what you build, for whom, and one number. No 'passionate', 'driven', 'aspiring' as the first word, no third person, no opening with your own name."
+    },
+    {
+      "id": "about_body",
+      "points": 10,
+      "full_marks": "First person. What you've built, one or two receipts with numbers, how you think about products, a keyword line, and one clear next step (email, portfolio link). 1,000-1,500 characters."
+    },
+    {
+      "id": "featured",
+      "points": 10,
+      "full_marks": "Three items: your best post, a proof asset (product teardown, PRD, case-comp deck, demo), and a repo or portfolio link. Nothing stale. 80% of profiles leave this empty, so it's a free edge."
+    },
+    {
+      "id": "experience",
+      "points": 10,
+      "full_marks": "Roles and internships each get one line of scope and 2-3 outcome bullets with numbers (what changed because of you), not duties."
+    },
+    {
+      "id": "projects",
+      "points": 8,
+      "full_marks": "Shipped projects listed with a one-line problem, what you built, a number (users, stars, time saved) and a link. For a student this is often stronger proof than experience."
+    },
+    {
+      "id": "activity",
+      "points": 10,
+      "full_marks": "Posted or commented in the last 7 days. An empty activity feed reads as an abandoned profile."
+    },
+    {
+      "id": "skills",
+      "points": 6,
+      "full_marks": "Top 3 skills are the ones you want to be hired for (e.g. Product Management, Product Strategy, SQL) and are endorsed. The rest is noise."
+    },
+    {
+      "id": "recommendations",
+      "points": 6,
+      "full_marks": "At least two, from a manager, professor, or team lead, each naming a specific thing you did, not your character."
+    },
+    {
+      "id": "banner",
+      "points": 5,
+      "full_marks": "One line of positioning and one way to reach you or see your work. Not the default gradient."
+    },
+    {
+      "id": "photo",
+      "points": 5,
+      "full_marks": "Face fills about 60% of the frame, eyes visible, recent, plain background."
+    },
+    {
+      "id": "education_certs",
+      "points": 4,
+      "full_marks": "Degree with relevant coursework or clubs, plus only the certificates that support what you build. Ten unrelated certificates hurt more than they help."
+    },
+    {
+      "id": "contact",
+      "points": 4,
+      "full_marks": "Custom URL, a working email, portfolio or GitHub link in contact info, and profile settings (Creator mode, Services) that match what you want people to contact you about."
+    }
+  ]
+}

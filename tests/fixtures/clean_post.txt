@@ -1,0 +1,11 @@
+I spent 9 hours on a settings page that 2 people ever opened.
+
+The sample app had 6 test users. I asked each one what they changed in settings, and four of them said they had never found the page. They used the defaults.
+
+So I deleted the page and picked better defaults instead. It took me 30 minutes in Claude Code, mostly because I wrote the plan to a file first and let it work one step at a time.
+
+The week after, the same 6 testers sent 12 messages about the app. Not one of them asked where settings went.
+
+If you're building for a handful of people, watch them use it before you add an option. Ten minutes of watching taught me more than the 9 hours did.
+
+What's the feature you built that nobody asked for?
